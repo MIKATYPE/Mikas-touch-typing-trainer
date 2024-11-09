@@ -4451,9 +4451,9 @@ function procatrain(g,nChar) /* ローマ字ランダム練習 ローマ字単�
 				MIKA_ttype_speed_time=(MIKA_type_end_time-MIKA_type_start_time)/1000.0; /* 練習時間 秒を計算 */
 			}
 			nChar=uppertolower(nChar); /* 入力文字を小文字に変換 */
-			if (MIKA_key_char==nChar||MIKA_key_char2==nChar) /* 入力文字が正解の場合 */
+			if (MIKA_key_char===nChar||MIKA_key_char2===nChar) /* 入力文字が正解の場合 */
 			{
-				if(MIKA_key_char==' '||((MIKA_key_char==nChar)&&(MIKA_r_count+1>=MIKA_romaji_length))||((MIKA_key_char2==nChar)&&(MIKA_r_count+1>=MIKA_romaji_length2))) /* 正解がスペースかローマ字入力文字数がひらがなローマ字表記の文字数を超えた場合 */
+				if(MIKA_key_char===' '||((MIKA_key_char===nChar)&&(MIKA_r_count+1>=MIKA_romaji_length))||((MIKA_key_char2===nChar)&&(MIKA_r_count+1>=MIKA_romaji_length2))) /* 正解がスペースかローマ字入力文字数がひらがなローマ字表記の文字数を超えた場合 */
 				{
 					if(MIKA_w_count+1>=MIKA_cline_c) /* すべての練習文字を入力した場合は練習を終了 */
 					{
@@ -4506,7 +4506,7 @@ function procatrain(g,nChar) /* ローマ字ランダム練習 ローマ字単�
 					MIKA_time_start_flag=1; /* 練習時間計測フラグセット */
 					MIKA_Procatimer = setInterval(Procatimer,MIKA_random_time_interval,g); /* タイマーを一秒間隔でセット */
 				}
-				if(MIKA_key_char!=nChar&&MIKA_key_char2==nChar) /* 正解が二番目表記のローマ字の場合 */
+				if(MIKA_key_char!==nChar&&MIKA_key_char2===nChar) /* 正解が二番目表記のローマ字の場合 */
 				{
 					dispromaji(g,MIKA_romaji,1); /* 表示中のローマ字を消去 */
 					MIKA_key_char=MIKA_key_char2; /* 二番目の表記のローマ字の文字を一番目の表記の文字に設定 */
@@ -4517,7 +4517,7 @@ function procatrain(g,nChar) /* ローマ字ランダム練習 ローマ字単�
 					MIKA_romaji_length2=0; /* 二番目の表記のローマ字の文字数をクリア */
 					dispromaji(g,MIKA_romaji,0); /* ローマ字再表示 */
 				}
-				else if(MIKA_key_char==nChar&&MIKA_key_char2!=nChar) /* 正解が一番目の表記のローマ字の場合 */
+				else if(MIKA_key_char===nChar&&MIKA_key_char2!==nChar) /* 正解が一番目の表記のローマ字の場合 */
 				{
 					MIKA_key_char2=0;  /* 二番目の表記のローマ字の文字をクリア */
 					MIKA_romaji2=null; /* 二番目の表記のローマ字をクリア */
