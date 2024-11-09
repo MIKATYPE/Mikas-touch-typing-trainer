@@ -1,6 +1,6 @@
 Mika's touch typing trainer Ver2.06.01 Javascript source code
 
-Copy Right Jirou Iamura
+Copy Right Jirou Imamura
 
 This source code is Open Source. Modification and redistribution are permitted.
 
