@@ -3461,11 +3461,11 @@ function dispmaxspeedrecord(g,c,i1,j1,i2,j2) /* ランダム練習 英単語練�
 	}
 function dispmaxspeedrecord1(g,i1,j1,i2,j2) /* ランダム練習 英単語練習 最高入力速度と 達成日を表示 */
 	{
-			dispmaxspeedrecord(g,"Maximum Type Speed",i1,j1,i2,j2);
+			dispmaxspeedrecord(g,"Maximum Typing Speed",i1,j1,i2,j2);
 	}
 function dispmaxspeedrecord2(g,i1,j1,i2,j2) /* ローマ字練習の 最高入力速度と 達成日を表示 */
 	{
-			dispmaxspeedrecord(g,"Maximum Type Speed Romaji",i1,j1,i2,j2);
+			dispmaxspeedrecord(g,"Maximum Typing Speed Romaji",i1,j1,i2,j2);
  	}
 function disptrain(g,mest) /* ランダム練習 英単語練習 実行画面の表示 */
 {
@@ -3479,7 +3479,7 @@ function disptrain(g,mest) /* ランダム練習 英単語練習 実行画面の
 		}
 		if(MIKA_type_speed_record[MIKA_type_kind_no]!=0.0) /* 最高入力速度がゼロでない場合 */
 		{
-			dispmaxspeedrecord1(g,3,23,3,53);
+			dispmaxspeedrecord1(g,3,22,3,53);
 		}
 		dispctable(g); /* 練習文字を表示 */
 		dispabortmes2(g,0); /* エスケープキーを押すと中断しますのメッセージを表示 */
@@ -3498,7 +3498,7 @@ function dispatrain(g,mest) /* ローマ字ランダム練習 ローマ字単語
 		}
 		if(MIKA_type_speed_record[MIKA_type_kind_no]!=0.0) /* 最高入力速度がゼロでない場合 */
 		{
-			dispmaxspeedrecord2(g,4,29,4,65); /* 最高入力速度と達成日時を表示 */
+			dispmaxspeedrecord2(g,4,27,4,65); /* 最高入力速度と達成日時を表示 */
 		}
 		dispromaji(g,MIKA_romaji,0); /* ローマ字表記ガイドを表示 */
 		dispctable(g); /* 練習ひらがなを表示 */
@@ -4056,8 +4056,8 @@ function dispspeedrate(g,flag) /* ランダム練習 英単語練習 入力速�
 			cslcolor(g,MIKA_bk_color); /* flagが=1の場合は表示消去 */
 			offset=0;
 		}
-		a="Current Type Speed"+formatf1(MIKA_type_speed,6)+"/min"; /* 入力速度を文字列に変換 */
-		cslput(g,5*16,(23+offset)*8,a); /* 入力速度を表示 */
+		a="Current Typing Speed"+formatf1(MIKA_type_speed,6)+"/min"; /* 入力速度を文字列に変換 */
+		cslput(g,5*16,(22+offset)*8,a); /* 入力速度を表示 */
 	}
 function dispspeedrate2(g,flag) /* ローマ字練習 打鍵数 入力速度表示 */
 // flag=0 表示 flag=1 消去
